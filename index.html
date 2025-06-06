@@ -1,70 +1,99 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joow Pires | Desenvolvedor</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Joow Pires - Desenvolvedor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
       body {
-        background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+        background: radial-gradient(ellipse at top right, #1f1c2c, #111);
         color: white;
         font-family: 'Inter', sans-serif;
       }
+
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .whatsapp-btn {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        z-index: 1000;
+      }
     </style>
   </head>
-  <body class="min-h-screen">
+
+  <body class="p-4">
     <!-- Navbar -->
-    <nav class="flex justify-between items-center px-6 py-4 text-sm text-white">
-      <div class="font-bold text-lg">Joow Pires</div>
-      <ul class="flex gap-6">
-        <li><a href="#">Home</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav><!-- Hero -->
-<section class="text-center px-4 mt-10">
-  <h1 class="text-2xl text-pink-400">Olá, meu nome é</h1>
-  <h2 class="text-5xl font-extrabold text-white my-4">Joow Pires</h2>
-  <p class="text-gray-300 max-w-xl mx-auto">
-    Eu sou um desenvolvedor criando experiências digitais incríveis.
-  </p>
-  <a href="#sobre" class="inline-block mt-6 px-6 py-2 border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white transition rounded">
-    Saiba Mais
-  </a>
-</section>
+    <nav class="flex justify-between items-center py-4 text-sm text-gray-300">
+      <div class="font-semibold">Home</div>
+      <div class="flex gap-6">
+        <a href="#projetos">Projetos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
 
-<!-- Projetos -->
-<section id="projetos" class="mt-20 px-6">
-  <h3 class="text-xl text-pink-400 mb-4">PROJETOS</h3>
-  <h2 class="text-3xl font-bold mb-10">Projetos em Destaque</h2>
-  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    <div class="border border-pink-400 rounded-lg p-4">
-      <h4 class="font-bold">Nome do Projeto</h4>
-      <p class="text-sm text-gray-300">Descrição do projeto vai aqui lorem ipsum</p>
-    </div>
-    <div class="border border-pink-400 rounded-lg p-4">
-      <h4 class="font-bold">Nome do Projeto</h4>
-      <p class="text-sm text-gray-300">Descrição do projeto vai aqui lorem ipsum</p>
-    </div>
-    <div class="border border-pink-400 rounded-lg p-4">
-      <h4 class="font-bold">Nome do Projeto</h4>
-      <p class="text-sm text-gray-300">Descrição do projeto vai aqui lorem ipsum</p>
-    </div>
-  </div>
-</section>
+    <!-- Hero -->
+    <section class="mt-10 flex flex-col md:flex-row items-center gap-8">
+      <div class="flex-1 space-y-4">
+        <h2 class="text-red-400 text-lg">Olá, meu nome é</h2>
+        <h1 class="text-4xl md:text-5xl font-bold">Joow Pires</h1>
+        <p class="text-gray-300 max-w-md">
+          Eu sou um desenvolvedor criando experiências digitais incríveis.
+        </p>
+        <a href="#projetos" class="inline-block mt-4 px-6 py-2 border border-red-500 text-red-400 rounded hover:bg-red-600 hover:text-white transition">
+          Saiba Mais
+        </a>
+      </div>
+      <div class="flex-1">
+        <img src="https://i.ibb.co/8rHn79T/dev-avatar.png" alt="Avatar" class="rounded-full w-60 h-60 object-cover mx-auto shadow-lg border-2 border-red-500" />
+      </div>
+    </section>
 
-<!-- Habilidades -->
-<section class="mt-20 px-6">
-  <h3 class="text-xl text-pink-400 mb-4">HABILIDADES</h3>
-  <h2 class="text-3xl font-bold mb-10">Habilidades</h2>
-  <div class="flex flex-wrap gap-6 justify-center">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-16 h-16" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="w-16 h-16 invert" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind" class="w-16 h-16" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-16 h-16" />
-  </div>
-</section>
+    <!-- Projetos -->
+    <section id="projetos" class="mt-16">
+      <h2 class="text-red-400 text-sm mb-2">PROJETOS</h2>
+      <h3 class="text-2xl font-semibold mb-6">Projetos em Destaque</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card">
+          <h4 class="font-semibold text-lg">Nome do Projeto</h4>
+          <p class="text-sm text-gray-300">Descrição do projeto vai aqui lorem ipsum</p>
+        </div>
+        <div class="card">
+          <h4 class="font-semibold text-lg">Nome do Projeto</h4>
+          <p class="text-sm text-gray-300">Descrição do projeto vai aqui lorem ipsum</p>
+        </div>
+        <div class="card">
+          <h4 class="font-semibold text-lg">Nome do Projeto</h4>
+          <p class="text-sm text-gray-300">Descrição do projeto vai aqui lorem ipsum</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="mt-16">
+      <h2 class="text-red-400 text-sm mb-2">HABILIDADES</h2>
+      <h3 class="text-2xl font-semibold mb-6">Habilidades</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-16 h-16 mx-auto" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="w-16 h-16 mx-auto bg-white rounded" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind" class="w-16 h-16 mx-auto" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" class="w-16 h-16 mx-auto" />
+      </div>
+    </section>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" class="whatsapp-btn">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-12 h-12" />
+    </a>
+  </body>
+</html></section>
 
 <!-- WhatsApp -->
 <a
